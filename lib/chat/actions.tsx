@@ -128,7 +128,7 @@ async function submitUserMessage(content: string) {
     headers: {
       'Content-Type': 'application/json'
     },
-    maxDuration: 20
+    maxDuration: 30
   }
 
   const { data } = await axios.post(
