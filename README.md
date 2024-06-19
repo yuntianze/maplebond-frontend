@@ -44,7 +44,8 @@ To run this project locally, follow these steps:
    Create a `.env.local` file in the root directory and add your environment variables. For example:
 
    ```env
-   NEXT_PUBLIC_API_URL=https://api.maplebond.com
+    # Generate a random secret: https://generate-secret.vercel.app/32 or `openssl rand -base64 32`
+    AUTH_SECRET=XXXXXXXX
    ```
 
 4. **Run the development server:**
