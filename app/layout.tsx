@@ -8,20 +8,15 @@ import { Providers } from '@/components/providers'
 import { Header } from '@/components/header'
 import { Toaster } from '@/components/ui/sonner'
 
-export const maxDuration = 30
-export const dynamic = 'force-dynamic'
-
-import { submitUserMessage } from '@/lib/chat/actions'
-
 export const metadata = {
-  metadataBase: process.env.VERCEL_URL
-    ? new URL(`https://${process.env.VERCEL_URL}`)
+  metadataBase: process.env.HOME_URL
+    ? new URL(`https://${process.env.HOME_URL}`)
     : undefined,
   title: {
-    default: 'Next.js AI Chatbot',
-    template: `%s - Next.js AI Chatbot`
+    default: 'MapleBond',
+    template: `%s - Your AI Assistant`
   },
-  description: 'An AI-powered chatbot template built with Next.js and Vercel.',
+  description: 'Connecting Cultures, Creating Community',
   icons: {
     icon: '/favicon.ico',
     shortcut: '/favicon-16x16.png',

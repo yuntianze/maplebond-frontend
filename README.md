@@ -83,7 +83,7 @@ This project is licensed under the MIT License. See the LICENSE file for more de
 
 ## Contact
 
-For any inquiries or issues, please contact us at support@maplebond.com.
+For any inquiries or issues, please contact us at devyuantian@gmail.com.
 
 ---
 

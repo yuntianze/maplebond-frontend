@@ -5,8 +5,11 @@ import { auth } from '@/auth'
 import { Session } from '@/lib/types'
 import { getMissingKeys } from '@/app/actions'
 
+export const maxDuration = 30
+export const dynamic = 'force-dynamic'
+
 export const metadata = {
-  title: 'Next.js AI Chatbot'
+  title: 'MapleBond'
 }
 
 export default async function IndexPage() {

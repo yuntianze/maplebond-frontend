@@ -476,7 +476,130 @@ function IconChevronUpDown({
   )
 }
 
+function IconCommunity({ className, ...props }: React.ComponentProps<'svg'>) {
+  return (
+    <svg
+      fill="currentColor"
+      viewBox="0 0 24 24"
+      role="img"
+      xmlns="http://www.w3.org/2000/svg"
+      className={`size-4 ${className}`}
+      {...props}
+    >
+      <title>Community icon</title>
+      <path d="M12 2C6.48 2 2 6.48 2 12c0 4.06 2.44 7.5 5.89 9.04.43.08.58-.18.58-.4 0-.2-.01-.73-.01-1.44-2.14.37-2.73-.52-2.9-1-.1-.27-.52-1-1-1.21-.34-.14-.83-.5-.01-.51.77-.01 1.33.71 1.52 1 .88 1.51 2.3 1.08 2.87.83.09-.64.34-1.08.61-1.33-1.78-.2-3.64-.88-3.64-3.91 0-.86.31-1.57.82-2.12-.08-.2-.36-1.02.08-2.12 0 0 .67-.22 2.19.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.52-1.04 2.19-.82 2.19-.82.44 1.1.16 1.92.08 2.12.51.55.82 1.26.82 2.12 0 3.03-1.87 3.71-3.65 3.91.35.31.66.93.66 1.87 0 1.35-.01 2.44-.01 2.77 0 .23.15.49.58.4C19.56 19.5 22 16.06 22 12c0-5.52-4.48-10-10-10z" />
+    </svg>
+  )
+}
+
+function IconSocial({ className, ...props }: React.ComponentProps<'svg'>) {
+  return (
+    <svg
+      fill="currentColor"
+      viewBox="0 0 24 24"
+      role="img"
+      xmlns="http://www.w3.org/2000/svg"
+      className={`size-4 ${className}`}
+      {...props}
+    >
+      <title>Social icon</title>
+      <path d="M16.5 3A4.5 4.5 0 1121 7.5 4.5 4.5 0 0116.5 3zm-9 0A4.5 4.5 0 117 7.5 4.5 4.5 0 017.5 3zm0 12A4.5 4.5 0 113 19.5 4.5 4.5 0 017.5 15zm9 0A4.5 4.5 0 1116 19.5 4.5 4.5 0 0116.5 15zM9.75 12a3.75 3.75 0 103.75 3.75A3.75 3.75 0 009.75 12zM9.75 1A3.75 3.75 0 106.06 4.69 3.75 3.75 0 009.75 1z" />
+    </svg>
+  )
+}
+
+function IconNetwork({ className, ...props }: React.ComponentProps<'svg'>) {
+  return (
+    <svg
+      fill="currentColor"
+      viewBox="0 0 24 24"
+      role="img"
+      xmlns="http://www.w3.org/2000/svg"
+      className={`size-4 ${className}`}
+      {...props}
+    >
+      <title>Network icon</title>
+      <path d="M20.285 15.178c-.524-.011-1.05.073-1.56.235-1.17-1.42-2.93-2.243-4.725-2.243s-3.555.823-4.725 2.243a5.478 5.478 0 00-3.12-.235 3.774 3.774 0 00-1.66.933c-.312-.134-.65-.201-.992-.201a2.91 2.91 0 00-2.91 2.91 2.91 2.91 0 002.91 2.91c.617 0 1.206-.199 1.66-.558a5.478 5.478 0 003.12.235c1.17 1.42 2.93 2.243 4.725 2.243s3.555-.823 4.725-2.243a5.478 5.478 0 003.12.235 2.91 2.91 0 002.91-2.91 2.91 2.91 0 00-2.91-2.91c-.343 0-.68.067-.992.201a3.774 3.774 0 00-1.66-.933zM12 19a3.757 3.757 0 01-3.75-3.75A3.757 3.757 0 0112 11.5a3.757 3.757 0 013.75 3.75A3.757 3.757 0 0112 19zM6.75 7.5A3.757 3.757 0 013 3.75 3.757 3.757 0 016.75 0a3.757 3.757 0 013.75 3.75A3.757 3.757 0 016.75 7.5zM17.25 7.5A3.757 3.757 0 0113.5 3.75 3.757 3.757 0 0117.25 0a3.757 3.757 0 013.75 3.75A3.757 3.757 0 0117.25 7.5z" />
+    </svg>
+  )
+}
+
+function IconCommunityGradient({
+  className,
+  ...props
+}: React.ComponentProps<'svg'>) {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      role="img"
+      xmlns="http://www.w3.org/2000/svg"
+      className={`size-4 ${className}`}
+      {...props}
+    >
+      <defs>
+        <linearGradient
+          id="communityGradient"
+          x1="0%"
+          y1="0%"
+          x2="100%"
+          y2="100%"
+        >
+          <stop offset="0%" style={{ stopColor: '#34d399', stopOpacity: 1 }} />
+          <stop
+            offset="100%"
+            style={{ stopColor: '#3b82f6', stopOpacity: 1 }}
+          />
+        </linearGradient>
+      </defs>
+      <title>MapleBond Community</title>
+      <path
+        fill="url(#communityGradient)"
+        d="M12 2C6.48 2 2 6.48 2 12c0 4.06 2.44 7.5 5.89 9.04.43.08.58-.18.58-.4 0-.2-.01-.73-.01-1.44-2.14.37-2.73-.52-2.9-1-.1-.27-.52-1-1-1.21-.34-.14-.83-.5-.01-.51.77-.01 1.33.71 1.52 1 .88 1.51 2.3 1.08 2.87.83.09-.64.34-1.08.61-1.33-1.78-.2-3.64-.88-3.64-3.91 0-.86.31-1.57.82-2.12-.08-.2-.36-1.02.08-2.12 0 0 .67-.22 2.19.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.52-1.04 2.19-.82 2.19-.82.44 1.1.16 1.92.08 2.12.51.55.82 1.26.82 2.12 0 3.03-1.87 3.71-3.65 3.91.35.31.66.93.66 1.87 0 1.35-.01 2.44-.01 2.77 0 .23.15.49.58.4C19.56 19.5 22 16.06 22 12c0-5.52-4.48-10-10-10z"
+      />
+    </svg>
+  )
+}
+
+function IconSocialAnimated({
+  className,
+  ...props
+}: React.ComponentProps<'svg'>) {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      role="img"
+      xmlns="http://www.w3.org/2000/svg"
+      className={`size-4 ${className}`}
+      {...props}
+    >
+      <style>
+        {`
+            @keyframes pulse {
+              0% { transform: scale(1); }
+              50% { transform: scale(1.1); }
+              100% { transform: scale(1); }
+            }
+            .animated-icon {
+              animation: pulse 1.5s infinite;
+            }
+          `}
+      </style>
+      <title>Social icon</title>
+      <path
+        className="animated-icon"
+        fill="currentColor"
+        d="M16.5 3A4.5 4.5 0 1121 7.5 4.5 4.5 0 0116.5 3zm-9 0A4.5 4.5 0 117 7.5 4.5 4.5 0 017.5 3zm0 12A4.5 4.5 0 113 19.5 4.5 4.5 0 017.5 15zm9 0A4.5 4.5 0 1116 19.5 4.5 4.5 0 0116.5 15zM9.75 12a3.75 3.75 0 103.75 3.75A3.75 3.75 0 009.75 12zM9.75 1A3.75 3.75 0 106.06 4.69 3.75 3.75 0 009.75 1z"
+      />
+    </svg>
+  )
+}
+
 export {
+  IconCommunity,
+  IconSocial,
+  IconNetwork,
+  IconCommunityGradient,
+  IconSocialAnimated,
   IconEdit,
   IconNextChat,
   IconOpenAI,
