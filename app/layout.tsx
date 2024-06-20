@@ -8,6 +8,11 @@ import { Providers } from '@/components/providers'
 import { Header } from '@/components/header'
 import { Toaster } from '@/components/ui/sonner'
 
+export const maxDuration = 30
+export const dynamic = 'force-dynamic'
+
+import { submitUserMessage } from '@/lib/chat/actions'
+
 export const metadata = {
   metadataBase: process.env.VERCEL_URL
     ? new URL(`https://${process.env.VERCEL_URL}`)
