@@ -38,6 +38,9 @@ import { auth } from '@/auth'
 import axios from 'axios'
 import { time } from 'console'
 
+export const maxDuration = 30
+export const dynamic = 'force-dynamic'
+
 async function confirmPurchase(symbol: string, price: number, amount: number) {
   'use server'
 
