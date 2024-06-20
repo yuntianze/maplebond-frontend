@@ -594,7 +594,24 @@ function IconSocialAnimated({
   )
 }
 
+function IconYouTube({ className, ...props }: React.ComponentProps<'svg'>) {
+  return (
+    <svg
+      role="img"
+      viewBox="0 0 24 24"
+      xmlns="http://www.w3.org/2000/svg"
+      fill="currentColor"
+      className={`size-4 ${className}`}
+      {...props}
+    >
+      <title>YouTube</title>
+      <path d="M23.498 6.186a2.958 2.958 0 0 0-2.082-2.085C19.592 3.544 12 3.544 12 3.544s-7.591 0-9.415.557a2.958 2.958 0 0 0-2.083 2.085C0 8.01 0 12 0 12s0 3.99.502 5.814a2.958 2.958 0 0 0 2.083 2.086c1.824.556 9.415.556 9.415.556s7.591 0 9.415-.556a2.958 2.958 0 0 0 2.082-2.086C24 15.99 24 12 24 12s0-3.99-.502-5.814zM9.545 15.568V8.432l6.145 3.568-6.145 3.568z" />
+    </svg>
+  )
+}
+
 export {
+  IconYouTube,
   IconCommunity,
   IconSocial,
   IconNetwork,

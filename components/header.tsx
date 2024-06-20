@@ -5,6 +5,7 @@ import { cn } from '@/lib/utils'
 import { auth } from '@/auth'
 import { Button, buttonVariants } from '@/components/ui/button'
 import {
+  IconYouTube,
   IconGitHub,
   IconNextChat,
   IconSeparator,
@@ -56,6 +57,17 @@ export function Header() {
         <React.Suspense fallback={<div className="flex-1 overflow-auto" />}>
           <UserOrLogin />
         </React.Suspense>
+      </div>
+      <div className="flex items-center justify-end space-x-2">
+        <a
+          target="_blank"
+          href="https://www.youtube.com/watch?v=6-iP-R0oS6A"
+          rel="noopener noreferrer"
+          className={cn(buttonVariants({ variant: 'outline' }))}
+        >
+          <IconYouTube />
+          <span className="hidden ml-2 md:flex">Demonstration</span>
+        </a>
       </div>
       <div className="flex items-center justify-end space-x-2">
         <a
