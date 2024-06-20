@@ -5,7 +5,7 @@ import { auth } from '@/auth'
 import { Session } from '@/lib/types'
 import { getMissingKeys } from '@/app/actions'
 
-export const maxDuration = 30
+export const maxDuration = 50
 export const dynamic = 'force-dynamic'
 
 export const metadata = {
