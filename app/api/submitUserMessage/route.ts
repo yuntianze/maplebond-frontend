@@ -6,3 +6,9 @@ export function GET(request: Request) {
     status: 200
   })
 }
+
+export function POST(request: Request) {
+  return new Response('Vercel', {
+    status: 200
+  })
+}

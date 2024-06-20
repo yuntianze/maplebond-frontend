@@ -36,6 +36,7 @@ import { SpinnerMessage, UserMessage } from '@/components/stocks/message'
 import { Chat, Message } from '@/lib/types'
 import { auth } from '@/auth'
 import axios from 'axios'
+import { time } from 'console'
 
 async function confirmPurchase(symbol: string, price: number, amount: number) {
   'use server'
@@ -128,7 +129,7 @@ export async function submitUserMessage(content: string) {
     headers: {
       'Content-Type': 'application/json'
     },
-    maxDuration: 30
+    timeout: 30000
   }
 
   const { data } = await axios.post(
