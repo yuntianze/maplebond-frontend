@@ -12,8 +12,7 @@ export function FooterText({ className, ...props }: React.ComponentProps<'p'>) {
       )}
       {...props}
     >
-      My name is [stan jiang] and I am participating in the Microsoft Developer
-      AI Learning Hackathon.
+      Connecting Cultures, Creating Community!
     </p>
   )
 }
