@@ -15,7 +15,7 @@ export const metadata = {
     : undefined,
   title: {
     default: 'MapleBond',
-    template: `%s - Your AI Assistant`
+    template: `%s - Your North American native life specialist`
   },
   description: 'Connecting Cultures, Creating Community',
   icons: {
@@ -40,6 +40,23 @@ export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
+        <meta
+          name="description"
+          content="Connecting Cultures, Creating Community"
+        />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+        {/* Open Graph Tags */}
+        <meta
+          property="og:title"
+          content="MapleBond - Your North American native life specialist"
+        />
+        <meta
+          property="og:description"
+          content="Connecting Cultures, Creating Community"
+        />
+        <meta property="og:url" content="https://maplebond.com" />
+        <meta property="og:type" content="website" />
         {/* Google Analytics Script */}
         <Script
           strategy="afterInteractive"

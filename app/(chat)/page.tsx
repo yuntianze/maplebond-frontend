@@ -9,7 +9,7 @@ export const maxDuration = 50
 export const dynamic = 'force-dynamic'
 
 export const metadata = {
-  title: 'MapleBond'
+  title: 'MapleBond - Your North American native life specialist'
 }
 
 export default async function IndexPage() {
