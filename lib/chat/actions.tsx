@@ -36,7 +36,6 @@ import { SpinnerMessage, UserMessage } from '@/components/stocks/message'
 import { Chat, Message } from '@/lib/types'
 import { auth } from '@/auth'
 import axios from 'axios'
-import { time } from 'console'
 
 export const maxDuration = 30
 export const dynamic = 'force-dynamic'
@@ -111,7 +110,7 @@ async function confirmPurchase(symbol: string, price: number, amount: number) {
   }
 }
 
-export async function submitUserMessage(content: string) {
+async function submitUserMessage(content: string) {
   'use server'
 
   const aiState = getMutableAIState<typeof AI>()
@@ -143,15 +142,7 @@ export async function submitUserMessage(content: string) {
 
   return {
     id: nanoid(),
-    display: (
-      <BotCard>
-        <div className="max-w-md mx-auto bg-white rounded-xl shadow-md overflow-hidden md:max-w-2xl m-4">
-          <div className="p-8">
-            <p className="text-gray-500">{data}</p>
-          </div>
-        </div>
-      </BotCard>
-    )
+    text: data
   }
 }
 

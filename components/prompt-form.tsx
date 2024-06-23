@@ -5,7 +5,7 @@ import Textarea from 'react-textarea-autosize'
 
 import { useActions, useUIState } from 'ai/rsc'
 
-import { UserMessage } from './stocks/message'
+import { BotCard, UserMessage } from './stocks/message'
 import { type AI } from '@/lib/chat/actions'
 import { Button } from '@/components/ui/button'
 import { IconArrowElbow, IconPlus } from '@/components/ui/icons'
@@ -17,7 +17,8 @@ import {
 import { useEnterSubmit } from '@/lib/hooks/use-enter-submit'
 import { nanoid } from 'nanoid'
 import { useRouter } from 'next/navigation'
-import { LoadingSpinner } from '@/components/LoadingSpinner'
+import { LoadingSpinner } from '@/components/loading-spinner'
+import FormattedText from '@/components/formatted-text'
 
 export function PromptForm({
   input,
@@ -68,7 +69,17 @@ export function PromptForm({
         try {
           // Submit and get response message
           const response = await submitUserMessage(value)
-          setMessages(currentMessages => [...currentMessages, response])
+          setMessages(currentMessages => [
+            ...currentMessages,
+            {
+              ...response,
+              display: (
+                <BotCard>
+                  <FormattedText text={response.text} />
+                </BotCard>
+              )
+            }
+          ])
         } finally {
           setLoading(false)
         }

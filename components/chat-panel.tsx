@@ -10,8 +10,9 @@ import { ChatShareDialog } from '@/components/chat-share-dialog'
 import { useAIState, useActions, useUIState } from 'ai/rsc'
 import type { AI } from '@/lib/chat/actions'
 import { nanoid } from 'nanoid'
-import { UserMessage } from './stocks/message'
-import { LoadingSpinner } from '@/components/LoadingSpinner'
+import { BotCard, UserMessage } from './stocks/message'
+import { LoadingSpinner } from '@/components/loading-spinner'
+import FormattedText from '@/components/formatted-text'
 
 export interface ChatPanelProps {
   id?: string
@@ -92,7 +93,14 @@ export function ChatPanel({
                     )
                     setMessages(currentMessages => [
                       ...currentMessages,
-                      responseMessage
+                      {
+                        ...responseMessage,
+                        display: (
+                          <BotCard>
+                            <FormattedText text={responseMessage.text} />
+                          </BotCard>
+                        )
+                      }
                     ])
                   } finally {
                     setLoading(false)
