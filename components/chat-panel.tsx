@@ -11,6 +11,7 @@ import { useAIState, useActions, useUIState } from 'ai/rsc'
 import type { AI } from '@/lib/chat/actions'
 import { nanoid } from 'nanoid'
 import { UserMessage } from './stocks/message'
+import { LoadingSpinner } from '@/components/LoadingSpinner'
 
 export interface ChatPanelProps {
   id?: string
@@ -33,6 +34,7 @@ export function ChatPanel({
   const [messages, setMessages] = useUIState<typeof AI>()
   const { submitUserMessage } = useActions()
   const [shareDialogOpen, setShareDialogOpen] = React.useState(false)
+  const [loading, setLoading] = React.useState(false)
 
   const exampleMessages = [
     {
@@ -82,14 +84,19 @@ export function ChatPanel({
                     }
                   ])
 
-                  const responseMessage = await submitUserMessage(
-                    example.message
-                  )
+                  setLoading(true)
 
-                  setMessages(currentMessages => [
-                    ...currentMessages,
-                    responseMessage
-                  ])
+                  try {
+                    const responseMessage = await submitUserMessage(
+                      example.message
+                    )
+                    setMessages(currentMessages => [
+                      ...currentMessages,
+                      responseMessage
+                    ])
+                  } finally {
+                    setLoading(false)
+                  }
                 }}
               >
                 <div className="text-sm font-semibold">{example.heading}</div>
@@ -99,6 +106,8 @@ export function ChatPanel({
               </div>
             ))}
         </div>
+
+        {loading && <LoadingSpinner />}
 
         {messages?.length >= 2 ? (
           <div className="flex h-12 items-center justify-center">
