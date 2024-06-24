@@ -14,7 +14,7 @@ const FormattedText: React.FC<FormattedTextProps> = ({ text }) => {
   const paragraphs = text.split(/(?=\d+\.\s|-{1}\s)/).filter(Boolean)
 
   const handleComplete = () => {
-    if (currentParagraph < paragraphs.length - 1) {
+    if (currentParagraph < paragraphs.length) {
       setCompletedParagraphs(prev => [...prev, paragraphs[currentParagraph]])
       setCurrentParagraph(currentParagraph + 1)
     }
